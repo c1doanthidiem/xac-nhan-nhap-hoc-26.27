@@ -326,11 +326,8 @@ el('downloadQR').addEventListener('click', () => {
   document.body.removeChild(a);
 });
 </script>
-</script>
-
 <style>
-/* ===== FIX MOBILE FULL ===== */
-@media (max-width: 768px){
+@media (max-width:768px){
 
   .container{
     padding:12px;
@@ -339,65 +336,8 @@ el('downloadQR').addEventListener('click', () => {
 
   form .row{
     flex-direction: column;
+    gap:12px;
   }
-
-  .col-2, .col-3, .col-6{
-    flex: 1 1 100% !important;
-    max-width: 100% !important;
-  }
-
-  input, select{
-    width: 100% !important;
-    font-size:16px;
-  }
-
-  .row div[style*="display:flex"]{
-    flex-direction: row;
-    gap:6px;
-  }
-
-  .qr-area{
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .qr-box,
-  .transfer-info{
-    width:100%;
-  }
-
-  .actions{
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  button{
-    width:100%;
-  }
-
-  .actions > div{
-    text-align:left !important;
-    margin-left:0 !important;
-  }
-
-  .school{
-    font-size:16px;
-  }
-
-  .subtitle{
-    font-size:12px;
-  }
-}
-<style>
-@media (max-width:768px){
-
-  .school{font-size:18px; line-height:1.3;}
-  .subtitle{font-size:12px;}
-
-  .header{align-items:flex-start; gap:10px;}
-  .logo{width:50px; height:50px;}
-
-  form .row{flex-direction:column; gap:12px;}
 
   .col-2, .col-3, .col-6{
     width:100%;
@@ -410,10 +350,38 @@ el('downloadQR').addEventListener('click', () => {
     padding:12px;
   }
 
-  .actions{flex-direction:column;}
-  button{width:100%; padding:12px;}
+  .header{
+    align-items:flex-start;
+    gap:10px;
+  }
 
-  .qr-area{flex-direction:column;}
+  .logo{
+    width:50px;
+    height:50px;
+  }
+
+  .actions{
+    flex-direction:column;
+  }
+
+  button{
+    width:100%;
+    padding:12px;
+  }
+
+  .qr-area{
+    flex-direction:column;
+  }
+
+  .school{
+    font-size:18px;
+    line-height:1.3;
+  }
+
+  .subtitle{
+    font-size:12px;
+  }
+
 }
 </style>
 </body>
