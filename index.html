@@ -78,14 +78,13 @@ button.ghost{background:#eef6ff;color:var(--primary);border:1px solid rgba(11,11
     oninput="
       this.value = this.value
         .replace(/[^A-Za-zÀ-ỹ\s]/g, '')
-        .toLowerCase()
         .replace(/\s+/g, ' ')
         .trimStart()
         .split(' ')
         .map(word => {
           if (word.length === 0) return '';
           let first = word.charAt(0).toUpperCase();
-          let rest = word.slice(1).toLowerCase();
+          let rest = word.slice(1);
           
           if (word === 'bui') return 'Bùi';
           if (word === 'nguyen') return 'Nguyễn';
