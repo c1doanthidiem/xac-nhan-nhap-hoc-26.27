@@ -23,14 +23,19 @@ input[type="text"], input[type="tel"], select{padding:10px 12px;border:1px solid
 button{background:var(--primary);color:#fff;border:0;padding:10px 14px;border-radius:8px;cursor:pointer;font-weight:600;}
 button.ghost{background:#eef6ff;color:var(--primary);border:1px solid rgba(11,111,179,0.12);}
 .qr-area{display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-top:18px;}
-.qr-box{background:#fff;padding:12px;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:220px;min-height:120px;box-shadow:0 6px 18px rgba(15,23,42,0.04);}
+.qr-box img{width:100%;max-width:260px;}{background:#fff;padding:12px;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:220px;min-height:120px;box-shadow:0 6px 18px rgba(15,23,42,0.04);}
 .transfer-info{white-space:pre-wrap;background:#f8fafc;padding:12px;border-radius:8px;border:1px dashed #e6eef8;font-family:monospace;flex:1;min-width:260px;}
 .small{font-size:13px;color:var(--muted);margin-top:8px;}
 .center{display:flex;align-items:center;justify-content:center;}
 .footer{margin-top:14px;color:var(--muted);font-size:13px;text-align:center;}
 .amounts{display:flex;gap:8px;flex-wrap:wrap;}
 .amounts label{background:#f1fbff;padding:8px 10px;border-radius:8px; border:1px solid rgba(11,111,179,0.06); cursor:pointer; display:flex;align-items:center;justify-content:center; /* thêm */gap:6px;font-weight:600;color:var(--primary);width:100%; /* thêm */text-align:center; /* thêm */white-space:nowrap; /* thêm */}
-@media (max-width:640px){ .col-2{flex-basis:100%} .col-3{flex-basis:48%} .logo{width:56px;height:56px} } .school{font-size:18px;} .amounts{width:100%;}.amounts label{width:100%;justify-content:center;font-size:15px;}
+@media (max-width:640px){ 
+  .col-2{flex-basis:100%} 
+  .col-3{flex-basis:48%} 
+  .logo{width:56px;height:56px}
+  .school{font-size:18px;}
+}
 </style>
 </head>
 <body>
@@ -47,7 +52,7 @@ button.ghost{background:#eef6ff;color:var(--primary);border:1px solid rgba(11,11
     <form id="feeForm" onsubmit="return false;">
      <div class="row">
   <!-- Họ và tên -->
-  <div class="col-3" style="max-width: 260px;">
+  <div class="col-3"
   <label>Họ và tên Học sinh</label>
   <input 
     id="fullname" 
@@ -179,7 +184,7 @@ button.ghost{background:#eef6ff;color:var(--primary);border:1px solid rgba(11,11
   >
       <div class="row">
         <div style="width:100%">
-       <label>Các khoản kinh phí đầu năm học<label>
+       <label>Các khoản kinh phí đầu năm học</label>
 <div class="amounts" id="amounts">
   <label>
     <input type="radio" name="amount" value="7000000" checked>
@@ -358,21 +363,20 @@ el('downloadQR').addEventListener('click', () => {
     align-items:flex-start;
     gap:10px;
   }
-
   .logo{
     width:50px;
     height:50px;
   }
+.actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
 
-  .actions{
-    flex-direction:column;
-  }
-
-  button{
-    width:100%;
-    padding:12px;
-  }
-
+.actions > div{
+  width:100%;
+  text-align:left;
+}
   .qr-area{
     flex-direction:column;
   }
