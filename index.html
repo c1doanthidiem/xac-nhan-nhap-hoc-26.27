@@ -28,7 +28,25 @@ button.ghost{background:#eef6ff;color:var(--primary);border:1px solid rgba(11,11
 .small{font-size:13px;color:var(--muted);margin-top:8px;}
 .center{display:flex;align-items:center;justify-content:center;}
 .footer{margin-top:14px;color:var(--muted);font-size:13px;text-align:center;}
-.amounts{display:flex;gap:8px;flex-wrap:wrap;}
+.amounts label{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+
+  width:100%;
+  padding:10px;
+
+  font-weight:600;
+  color:var(--primary);
+
+  border-radius:8px;
+  background:#f1fbff;
+  border:1px solid rgba(11,111,179,0.06);
+
+  text-align:center;
+  flex-wrap:wrap; /* thêm cái này */
+}
 .amounts label{background:#f1fbff;padding:8px 10px;border-radius:8px; border:1px solid rgba(11,111,179,0.06); cursor:pointer; display:flex;align-items:center;justify-content:center; /* thêm */gap:6px;font-weight:600;color:var(--primary);width:100%; /* thêm */text-align:center;
 @media (max-width:640px){ 
   .col-2{flex-basis:100%} 
